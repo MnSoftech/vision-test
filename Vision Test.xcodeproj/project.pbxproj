@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D02096381F625541001E810D /* ColorBlindImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02096371F625541001E810D /* ColorBlindImageVC.swift */; };
+		D03B6B8C1F62A1A700735236 /* AstigmatismMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6B8B1F62A1A700735236 /* AstigmatismMainVC.swift */; };
+		D03B6B8E1F62A1B900735236 /* AstigmatismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6B8D1F62A1B900735236 /* AstigmatismVC.swift */; };
+		D03B6B901F62A4B000735236 /* ReadyAstigmatismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6B8F1F62A4B000735236 /* ReadyAstigmatismVC.swift */; };
+		D03B6B971F62BCFB00735236 /* LeftEyeAstigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6B961F62BCFB00735236 /* LeftEyeAstigVC.swift */; };
 		D07B8E4F1F610CCE0087B209 /* slide.xib in Resources */ = {isa = PBXBuildFile; fileRef = D07B8E4E1F610CCE0087B209 /* slide.xib */; };
 		D07B8E511F610D850087B209 /* SlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B8E501F610D850087B209 /* SlideView.swift */; };
 		D07B8E531F6123790087B209 /* VisualAcuityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B8E521F6123790087B209 /* VisualAcuityVC.swift */; };
@@ -25,7 +29,11 @@
 
 /* Begin PBXFileReference section */
 		D02096371F625541001E810D /* ColorBlindImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlindImageVC.swift; path = "Vision Test/ColorBlindImageVC.swift"; sourceTree = "<group>"; };
-		D07B8E4E1F610CCE0087B209 /* slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = slide.xib; sourceTree = "<group>"; };
+		D03B6B8B1F62A1A700735236 /* AstigmatismMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AstigmatismMainVC.swift; path = "Vision Test/AstigmatismMainVC.swift"; sourceTree = "<group>"; };
+		D03B6B8D1F62A1B900735236 /* AstigmatismVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AstigmatismVC.swift; path = "Vision Test/AstigmatismVC.swift"; sourceTree = "<group>"; };
+		D03B6B8F1F62A4B000735236 /* ReadyAstigmatismVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadyAstigmatismVC.swift; path = "Vision Test/ReadyAstigmatismVC.swift"; sourceTree = "<group>"; };
+		D03B6B961F62BCFB00735236 /* LeftEyeAstigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftEyeAstigVC.swift; path = "Vision Test/LeftEyeAstigVC.swift"; sourceTree = "<group>"; };
+		D07B8E4E1F610CCE0087B209 /* slide.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = slide.xib; path = "Vision Test/slide.xib"; sourceTree = "<group>"; };
 		D07B8E501F610D850087B209 /* SlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideView.swift; path = "Vision Test/SlideView.swift"; sourceTree = "<group>"; };
 		D07B8E521F6123790087B209 /* VisualAcuityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualAcuityVC.swift; path = "Vision Test/VisualAcuityVC.swift"; sourceTree = "<group>"; };
 		D07B8E541F6129420087B209 /* ReadyVisualAcuityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadyVisualAcuityVC.swift; path = "Vision Test/ReadyVisualAcuityVC.swift"; sourceTree = "<group>"; };
@@ -36,9 +44,9 @@
 		D0DF97041F5FCE56009AEE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0DF97061F5FCE56009AEE66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0DF97091F5FCE56009AEE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Vision Test/Assets.xcassets"; sourceTree = "<group>"; };
 		D0DF970E1F5FCE56009AEE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D0DF97101F5FCE56009AEE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D0DF97101F5FCE56009AEE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Vision Test/Info.plist"; sourceTree = "<group>"; };
 		D0DF97161F5FD54B009AEE66 /* VisualTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualTestViewController.swift; path = "Vision Test/VisualTestViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,17 +61,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D03B6B8A1F62A09C00735236 /* How to Use */ = {
+			isa = PBXGroup;
+			children = (
+				D07B8E501F610D850087B209 /* SlideView.swift */,
+				D07B8E4E1F610CCE0087B209 /* slide.xib */,
+			);
+			name = "How to Use";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		D03B6B931F62AF4700735236 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */,
+				D0DF970D1F5FCE56009AEE66 /* LaunchScreen.storyboard */,
+				D0DF97101F5FCE56009AEE66 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = ..;
+			sourceTree = "<group>";
+		};
 		D07B8E581F6162C00087B209 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D03B6B8F1F62A4B000735236 /* ReadyAstigmatismVC.swift */,
+				D03B6B961F62BCFB00735236 /* LeftEyeAstigVC.swift */,
+				D03B6B8B1F62A1A700735236 /* AstigmatismMainVC.swift */,
+				D03B6B8D1F62A1B900735236 /* AstigmatismVC.swift */,
 				D02096371F625541001E810D /* ColorBlindImageVC.swift */,
-				D07B8E541F6129420087B209 /* ReadyVisualAcuityVC.swift */,
-				D07B8E561F615BDE0087B209 /* LeftEyeVisualAcuityVC.swift */,
-				D07B8E521F6123790087B209 /* VisualAcuityVC.swift */,
-				D0DF97161F5FD54B009AEE66 /* VisualTestViewController.swift */,
-				D07B8E5D1F6168A60087B209 /* ColorBlindVC.swift */,
 				D07B8E591F6168520087B209 /* ColorBlindnessVC.swift */,
-				D07B8E501F610D850087B209 /* SlideView.swift */,
+				D07B8E5D1F6168A60087B209 /* ColorBlindVC.swift */,
+				D0DF97161F5FD54B009AEE66 /* VisualTestViewController.swift */,
+				D07B8E561F615BDE0087B209 /* LeftEyeVisualAcuityVC.swift */,
+				D07B8E541F6129420087B209 /* ReadyVisualAcuityVC.swift */,
+				D07B8E521F6123790087B209 /* VisualAcuityVC.swift */,
 			);
 			name = Controllers;
 			path = ..;
@@ -88,14 +120,12 @@
 		D0DF97031F5FCE56009AEE66 /* Vision Test */ = {
 			isa = PBXGroup;
 			children = (
+				D03B6B8A1F62A09C00735236 /* How to Use */,
 				D07B8E581F6162C00087B209 /* Controllers */,
-				D0DF97041F5FCE56009AEE66 /* AppDelegate.swift */,
-				D0DF97061F5FCE56009AEE66 /* ViewController.swift */,
-				D07B8E4E1F610CCE0087B209 /* slide.xib */,
 				D0DF97081F5FCE56009AEE66 /* Main.storyboard */,
-				D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */,
-				D0DF970D1F5FCE56009AEE66 /* LaunchScreen.storyboard */,
-				D0DF97101F5FCE56009AEE66 /* Info.plist */,
+				D0DF97061F5FCE56009AEE66 /* ViewController.swift */,
+				D0DF97041F5FCE56009AEE66 /* AppDelegate.swift */,
+				D03B6B931F62AF4700735236 /* Supporting Files */,
 			);
 			path = "Vision Test";
 			sourceTree = "<group>";
@@ -178,10 +208,14 @@
 				D07B8E531F6123790087B209 /* VisualAcuityVC.swift in Sources */,
 				D02096381F625541001E810D /* ColorBlindImageVC.swift in Sources */,
 				D0DF97051F5FCE56009AEE66 /* AppDelegate.swift in Sources */,
+				D03B6B901F62A4B000735236 /* ReadyAstigmatismVC.swift in Sources */,
 				D07B8E5A1F6168520087B209 /* ColorBlindnessVC.swift in Sources */,
 				D07B8E511F610D850087B209 /* SlideView.swift in Sources */,
+				D03B6B8E1F62A1B900735236 /* AstigmatismVC.swift in Sources */,
+				D03B6B971F62BCFB00735236 /* LeftEyeAstigVC.swift in Sources */,
 				D07B8E5E1F6168A60087B209 /* ColorBlindVC.swift in Sources */,
 				D0DF97171F5FD54B009AEE66 /* VisualTestViewController.swift in Sources */,
+				D03B6B8C1F62A1A700735236 /* AstigmatismMainVC.swift in Sources */,
 				D07B8E571F615BDE0087B209 /* LeftEyeVisualAcuityVC.swift in Sources */,
 				D07B8E551F6129420087B209 /* ReadyVisualAcuityVC.swift in Sources */,
 			);
@@ -204,6 +238,7 @@
 				D0DF970E1F5FCE56009AEE66 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = "Vision Test";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

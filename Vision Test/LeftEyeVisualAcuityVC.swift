@@ -1,0 +1,183 @@
+//
+//  LeftEyeVisualAcuityVC.swift
+//  Vision Test
+//
+//  Created by Muhammad Noaman on 07/09/2017.
+//  Copyright © 2017 MnSoftech. All rights reserved.
+//
+
+import UIKit
+
+class LeftEyeVisualAcuityVC: UIViewController {
+
+    @IBOutlet weak var answerView: UIView!
+    @IBOutlet var lableView: UIView!
+    @IBOutlet weak var btn2: UIButton!
+    @IBOutlet weak var btn1: UIButton!
+    @IBOutlet weak var btn3: UIButton!
+    @IBOutlet weak var btn4: UIButton!
+    @IBOutlet weak var lableViewText: UILabel!
+    @IBOutlet weak var resultView: UIView!
+    @IBOutlet weak var rightEyeResultLabel: UILabel!
+    @IBOutlet weak var leftEyeResultLabel: UILabel!
+    var testDone = 1
+    var correctCount = 0
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        // Do any additional setup after loading the view.
+    }
+
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func readyBtn(_ sender: UIButton) {
+        PerformTest1()
+    }
+    
+    @IBAction func answerChoosed(_ sender: UIButton) {
+        if (testDone == 1) {
+            if sender.currentTitle == "N" {
+                correctCount = correctCount + 1
+                print(correctCount)
+            }
+            PerformTest2()
+            testDone = 2
+        }else if (testDone == 2) {
+            if sender.currentTitle == "F" {
+                correctCount = correctCount + 1
+                print(correctCount)
+            }
+            PerformTest3()
+            testDone = 3
+        }else if (testDone == 3) {
+            if sender.currentTitle == "Q" {
+                correctCount = correctCount + 1
+                print(correctCount)
+            }
+            PerformTest4()
+            testDone = 4
+        }else if (testDone == 4) {
+            if sender.currentTitle == "D" {
+                correctCount = correctCount + 1
+                print(correctCount)
+            }
+            PerformTest5()
+            testDone = 5
+        }else if (testDone == 5) {
+            if sender.currentTitle == "B" {
+                correctCount = correctCount + 1
+                print(correctCount)
+            }
+            calculateLeftEyeResult(value: correctCount)
+            //resultView.isHidden = false
+        }
+    }
+    
+    func calculateLeftEyeResult (value : Int) {
+        let b = value * 100
+        let result = b / 5
+        leftEyeResultLabel.text = "\(result)%"
+        resultView.isHidden = false
+    }
+    
+    func calculateRightEyeResult (value : Int) {
+        
+        let b = value * 100
+        let result = b / 5
+        rightEyeResultLabel.text = "\(result)%"
+    }
+    
+    func PerformTest1 () {
+        
+        lableViewText.text = "N"
+        self.view.addSubview(lableView)
+        self.btn1.setTitle("L", for: .normal)
+        self.btn2.setTitle("J", for: .normal)
+        self.btn3.setTitle("W", for: .normal)
+        self.btn4.setTitle("N", for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.answerView.isHidden = false
+        }
+    }
+    
+    func PerformTest2 () {
+        
+        lableViewText.text = "F"
+        lableViewText.font = lableViewText.font.withSize(72)
+        self.answerView.isHidden = true
+        self.view.addSubview(lableView)
+        self.btn1.setTitle("N", for: .normal)
+        self.btn2.setTitle("F", for: .normal)
+        self.btn3.setTitle("C", for: .normal)
+        self.btn4.setTitle("E", for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.answerView.isHidden = false
+        }
+    }
+    
+    func PerformTest3 () {
+        
+        lableViewText.text = "Q"
+        lableViewText.font = lableViewText.font.withSize(31)
+        self.answerView.isHidden = true
+        self.view.addSubview(lableView)
+        self.btn1.setTitle("Q", for: .normal)
+        self.btn2.setTitle("P", for: .normal)
+        self.btn3.setTitle("O", for: .normal)
+        self.btn4.setTitle("D", for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.answerView.isHidden = false
+        }
+    }
+    
+    func PerformTest4 () {
+        
+        lableViewText.text = "D"
+        lableViewText.font = lableViewText.font.withSize(15)
+        self.answerView.isHidden = true
+        self.view.addSubview(lableView)
+        self.btn1.setTitle("G", for: .normal)
+        self.btn2.setTitle("P", for: .normal)
+        self.btn3.setTitle("D", for: .normal)
+        self.btn4.setTitle("B", for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.answerView.isHidden = false
+        }
+    }
+    
+    func PerformTest5 () {
+        
+        lableViewText.text = "B"
+        lableViewText.font = lableViewText.font.withSize(7.5)
+        self.answerView.isHidden = true
+        self.view.addSubview(lableView)
+        self.btn1.setTitle("D", for: .normal)
+        self.btn2.setTitle("L", for: .normal)
+        self.btn3.setTitle("Z", for: .normal)
+        self.btn4.setTitle("B", for: .normal)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+            self.answerView.isHidden = false
+        }
+    }
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
+
+}

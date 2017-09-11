@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		D02096381F625541001E810D /* ColorBlindImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02096371F625541001E810D /* ColorBlindImageVC.swift */; };
+		D0398B6A1F6667090048E5E2 /* DuochromeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0398B691F6667090048E5E2 /* DuochromeMainVC.swift */; };
+		D0398B6C1F66671B0048E5E2 /* DuochromeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0398B6B1F66671B0048E5E2 /* DuochromeVC.swift */; };
+		D0398B6E1F666CC10048E5E2 /* ReadyDuoRightVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0398B6D1F666CC10048E5E2 /* ReadyDuoRightVC.swift */; };
+		D0398B701F666CD20048E5E2 /* ReadyDuoLeftVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0398B6F1F666CD20048E5E2 /* ReadyDuoLeftVC.swift */; };
 		D03B6B8C1F62A1A700735236 /* AstigmatismMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6B8B1F62A1A700735236 /* AstigmatismMainVC.swift */; };
 		D03B6B8E1F62A1B900735236 /* AstigmatismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6B8D1F62A1B900735236 /* AstigmatismVC.swift */; };
 		D03B6B901F62A4B000735236 /* ReadyAstigmatismVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D03B6B8F1F62A4B000735236 /* ReadyAstigmatismVC.swift */; };
@@ -29,6 +33,10 @@
 
 /* Begin PBXFileReference section */
 		D02096371F625541001E810D /* ColorBlindImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlindImageVC.swift; path = "Vision Test/ColorBlindImageVC.swift"; sourceTree = "<group>"; };
+		D0398B691F6667090048E5E2 /* DuochromeMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuochromeMainVC.swift; path = "Vision Test/DuochromeMainVC.swift"; sourceTree = "<group>"; };
+		D0398B6B1F66671B0048E5E2 /* DuochromeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuochromeVC.swift; path = "Vision Test/DuochromeVC.swift"; sourceTree = "<group>"; };
+		D0398B6D1F666CC10048E5E2 /* ReadyDuoRightVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadyDuoRightVC.swift; path = "Vision Test/ReadyDuoRightVC.swift"; sourceTree = "<group>"; };
+		D0398B6F1F666CD20048E5E2 /* ReadyDuoLeftVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadyDuoLeftVC.swift; path = "Vision Test/ReadyDuoLeftVC.swift"; sourceTree = "<group>"; };
 		D03B6B8B1F62A1A700735236 /* AstigmatismMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AstigmatismMainVC.swift; path = "Vision Test/AstigmatismMainVC.swift"; sourceTree = "<group>"; };
 		D03B6B8D1F62A1B900735236 /* AstigmatismVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AstigmatismVC.swift; path = "Vision Test/AstigmatismVC.swift"; sourceTree = "<group>"; };
 		D03B6B8F1F62A4B000735236 /* ReadyAstigmatismVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadyAstigmatismVC.swift; path = "Vision Test/ReadyAstigmatismVC.swift"; sourceTree = "<group>"; };
@@ -85,8 +93,12 @@
 		D07B8E581F6162C00087B209 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D03B6B8F1F62A4B000735236 /* ReadyAstigmatismVC.swift */,
+				D0398B6F1F666CD20048E5E2 /* ReadyDuoLeftVC.swift */,
+				D0398B6D1F666CC10048E5E2 /* ReadyDuoRightVC.swift */,
+				D0398B6B1F66671B0048E5E2 /* DuochromeVC.swift */,
+				D0398B691F6667090048E5E2 /* DuochromeMainVC.swift */,
 				D03B6B961F62BCFB00735236 /* LeftEyeAstigVC.swift */,
+				D03B6B8F1F62A4B000735236 /* ReadyAstigmatismVC.swift */,
 				D03B6B8B1F62A1A700735236 /* AstigmatismMainVC.swift */,
 				D03B6B8D1F62A1B900735236 /* AstigmatismVC.swift */,
 				D02096371F625541001E810D /* ColorBlindImageVC.swift */,
@@ -212,12 +224,16 @@
 				D07B8E5A1F6168520087B209 /* ColorBlindnessVC.swift in Sources */,
 				D07B8E511F610D850087B209 /* SlideView.swift in Sources */,
 				D03B6B8E1F62A1B900735236 /* AstigmatismVC.swift in Sources */,
+				D0398B701F666CD20048E5E2 /* ReadyDuoLeftVC.swift in Sources */,
+				D0398B6A1F6667090048E5E2 /* DuochromeMainVC.swift in Sources */,
 				D03B6B971F62BCFB00735236 /* LeftEyeAstigVC.swift in Sources */,
 				D07B8E5E1F6168A60087B209 /* ColorBlindVC.swift in Sources */,
+				D0398B6C1F66671B0048E5E2 /* DuochromeVC.swift in Sources */,
 				D0DF97171F5FD54B009AEE66 /* VisualTestViewController.swift in Sources */,
 				D03B6B8C1F62A1A700735236 /* AstigmatismMainVC.swift in Sources */,
 				D07B8E571F615BDE0087B209 /* LeftEyeVisualAcuityVC.swift in Sources */,
 				D07B8E551F6129420087B209 /* ReadyVisualAcuityVC.swift in Sources */,
+				D0398B6E1F666CC10048E5E2 /* ReadyDuoRightVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

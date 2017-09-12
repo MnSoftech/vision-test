@@ -95,7 +95,11 @@ class LeftEyeVisualAcuityVC: UIViewController {
     func PerformTest1 () {
         
         lableViewText.text = "N"
+        
+        lableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableView)
+        constraintAdded()
+        
         self.btn1.setTitle("L", for: .normal)
         self.btn2.setTitle("J", for: .normal)
         self.btn3.setTitle("W", for: .normal)
@@ -111,7 +115,11 @@ class LeftEyeVisualAcuityVC: UIViewController {
         lableViewText.text = "F"
         lableViewText.font = lableViewText.font.withSize(72)
         self.answerView.isHidden = true
+        
+        lableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableView)
+        constraintAdded()
+        
         self.btn1.setTitle("N", for: .normal)
         self.btn2.setTitle("F", for: .normal)
         self.btn3.setTitle("C", for: .normal)
@@ -127,7 +135,11 @@ class LeftEyeVisualAcuityVC: UIViewController {
         lableViewText.text = "Q"
         lableViewText.font = lableViewText.font.withSize(31)
         self.answerView.isHidden = true
+        
+        lableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableView)
+        constraintAdded()
+        
         self.btn1.setTitle("Q", for: .normal)
         self.btn2.setTitle("P", for: .normal)
         self.btn3.setTitle("O", for: .normal)
@@ -143,7 +155,11 @@ class LeftEyeVisualAcuityVC: UIViewController {
         lableViewText.text = "D"
         lableViewText.font = lableViewText.font.withSize(15)
         self.answerView.isHidden = true
+        
+        lableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableView)
+        constraintAdded()
+        
         self.btn1.setTitle("G", for: .normal)
         self.btn2.setTitle("P", for: .normal)
         self.btn3.setTitle("D", for: .normal)
@@ -159,7 +175,11 @@ class LeftEyeVisualAcuityVC: UIViewController {
         lableViewText.text = "B"
         lableViewText.font = lableViewText.font.withSize(7.5)
         self.answerView.isHidden = true
+        
+        lableView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableView)
+        constraintAdded()
+        
         self.btn1.setTitle("D", for: .normal)
         self.btn2.setTitle("L", for: .normal)
         self.btn3.setTitle("Z", for: .normal)
@@ -168,6 +188,15 @@ class LeftEyeVisualAcuityVC: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.answerView.isHidden = false
         }
+    }
+    
+    func constraintAdded()  {
+        
+        let leftSideConstraint = NSLayoutConstraint(item: lableView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0)
+        let bottomConstraint = NSLayoutConstraint(item: lableView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let widthConstraint = NSLayoutConstraint(item: lableView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
+        let heightConstraint = NSLayoutConstraint(item: lableView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([leftSideConstraint, bottomConstraint, heightConstraint, widthConstraint])
     }
 
     /*

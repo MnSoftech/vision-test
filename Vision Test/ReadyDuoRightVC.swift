@@ -30,7 +30,10 @@ class ReadyDuoRightVC: UIViewController {
 
     @IBAction func readyBtn(_ sender: UIButton) {
         
+        duoSubView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(duoSubView)
+        constraintAdded()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             
             self.answerView.isHidden = false
@@ -69,7 +72,11 @@ class ReadyDuoRightVC: UIViewController {
         duoImageView.image = UIImage (named: "32")
         self.answerView.isHidden = true
         self.duoImageView.isHidden = false
-        self.view.addSubview(duoImageView)
+        
+        duoSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(duoSubView)
+        constraintAdded()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.duoImageView.isHidden = true
             self.answerView.isHidden = false
@@ -81,7 +88,11 @@ class ReadyDuoRightVC: UIViewController {
         duoImageView.image = UIImage (named: "33")
         self.answerView.isHidden = true
         self.duoImageView.isHidden = false
-        self.view.addSubview(duoImageView)
+        
+        duoSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(duoSubView)
+        constraintAdded()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.duoImageView.isHidden = true
             self.answerView.isHidden = false
@@ -95,6 +106,16 @@ class ReadyDuoRightVC: UIViewController {
         }
 
     }
+    
+    func constraintAdded()  {
+        
+        let leftSideConstraint = NSLayoutConstraint(item: duoSubView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0)
+        let bottomConstraint = NSLayoutConstraint(item: duoSubView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let widthConstraint = NSLayoutConstraint(item: duoSubView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
+        let heightConstraint = NSLayoutConstraint(item: duoSubView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([leftSideConstraint, bottomConstraint, heightConstraint, widthConstraint])
+    }
+
 
 
     /*

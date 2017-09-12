@@ -33,7 +33,10 @@ class LeftEyeAstigVC: UIViewController {
     
     @IBAction func readyBtn(_ sender: UIButton) {
         
+        leftSubView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(leftSubView)
+        constraintAdded()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             
             self.answerView.isHidden = false
@@ -80,11 +83,24 @@ class LeftEyeAstigVC: UIViewController {
         leftImageView.image = UIImage (named: "22")
         self.answerView.isHidden = true
         self.leftImageView.isHidden = false
+        
+        leftSubView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(leftSubView)
+        constraintAdded()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.leftImageView.isHidden = true
             self.answerView.isHidden = false
         }
+    }
+
+    func constraintAdded()  {
+        
+        let leftSideConstraint = NSLayoutConstraint(item: leftSubView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0)
+        let bottomConstraint = NSLayoutConstraint(item: leftSubView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let widthConstraint = NSLayoutConstraint(item: leftSubView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
+        let heightConstraint = NSLayoutConstraint(item: leftSubView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([leftSideConstraint, bottomConstraint, heightConstraint, widthConstraint])
     }
 
 

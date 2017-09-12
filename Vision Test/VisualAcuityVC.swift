@@ -7,13 +7,19 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class VisualAcuityVC: UIViewController {
+    
+    var interstitial: GADInterstitial!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+       // interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+       // let request = GADRequest()
+       // interstitial.load(request)
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,7 +27,11 @@ class VisualAcuityVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    @IBAction func startBtn(_ sender: UIButton) {
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 

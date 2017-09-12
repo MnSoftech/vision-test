@@ -34,7 +34,11 @@ class ColorBlindImageVC: UIViewController {
     }
 
     func firstTimeCall () {
+        
+        imageSubView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(imageSubView)
+        constraintAdded()
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.btn1.setTitle("4", for: .normal)
             self.btn2.setTitle("8", for: .normal)
@@ -105,7 +109,11 @@ class ColorBlindImageVC: UIViewController {
         
         showImage.image = UIImage (named: "12")
         self.answerView.isHidden = true
-        self.view.addSubview(showImage)
+        
+        imageSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(imageSubView)
+        constraintAdded()
+        
         self.btn1.setTitle("12", for: .normal)
         self.btn2.setTitle("2", for: .normal)
         self.btn3.setTitle("21", for: .normal)
@@ -122,7 +130,11 @@ class ColorBlindImageVC: UIViewController {
         showImage.image = UIImage (named: "13")
         self.answerView.isHidden = true
         self.showImage.isHidden = false
-        self.view.addSubview(showImage)
+        
+        imageSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(imageSubView)
+        constraintAdded()
+        
         self.btn1.setTitle("31", for: .normal)
         self.btn2.setTitle("35", for: .normal)
         self.btn3.setTitle("3", for: .normal)
@@ -139,7 +151,11 @@ class ColorBlindImageVC: UIViewController {
         showImage.image = UIImage (named: "14")
         self.answerView.isHidden = true
         self.showImage.isHidden = false
-        self.view.addSubview(showImage)
+        
+        imageSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(imageSubView)
+        constraintAdded()
+        
         self.btn1.setTitle("25", for: .normal)
         self.btn2.setTitle("55", for: .normal)
         self.btn3.setTitle("5", for: .normal)
@@ -156,7 +172,11 @@ class ColorBlindImageVC: UIViewController {
         showImage.image = UIImage (named: "15")
         self.answerView.isHidden = true
         self.showImage.isHidden = false
-        self.view.addSubview(showImage)
+        
+        imageSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(imageSubView)
+        constraintAdded()
+        
         self.btn1.setTitle("29", for: .normal)
         self.btn2.setTitle("99", for: .normal)
         self.btn3.setTitle("19", for: .normal)
@@ -167,6 +187,15 @@ class ColorBlindImageVC: UIViewController {
             self.answerView.isHidden = false
         }
         
+    }
+
+    func constraintAdded()  {
+        
+        let leftSideConstraint = NSLayoutConstraint(item: imageSubView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0)
+        let bottomConstraint = NSLayoutConstraint(item: imageSubView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let widthConstraint = NSLayoutConstraint(item: imageSubView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
+        let heightConstraint = NSLayoutConstraint(item: imageSubView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([leftSideConstraint, bottomConstraint, heightConstraint, widthConstraint])
     }
 
     /*

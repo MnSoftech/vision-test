@@ -29,9 +29,13 @@
 		D0DF970C1F5FCE56009AEE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */; };
 		D0DF970F1F5FCE56009AEE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF970D1F5FCE56009AEE66 /* LaunchScreen.storyboard */; };
 		D0DF97171F5FD54B009AEE66 /* VisualTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF97161F5FD54B009AEE66 /* VisualTestViewController.swift */; };
+		F5D44F19BEADB6E4B81BBC58 /* Pods_Vision_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B036C4BCD00F1EDFFF67BC /* Pods_Vision_Test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		ADDEB70E4A54DE5251AAC085 /* Pods-Vision Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vision Test/Pods-Vision Test.debug.xcconfig"; sourceTree = "<group>"; };
+		B3B036C4BCD00F1EDFFF67BC /* Pods_Vision_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vision_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA062909B732B94C1DCEDE88 /* Pods-Vision Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vision Test/Pods-Vision Test.release.xcconfig"; sourceTree = "<group>"; };
 		D02096371F625541001E810D /* ColorBlindImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlindImageVC.swift; path = "Vision Test/ColorBlindImageVC.swift"; sourceTree = "<group>"; };
 		D0398B691F6667090048E5E2 /* DuochromeMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuochromeMainVC.swift; path = "Vision Test/DuochromeMainVC.swift"; sourceTree = "<group>"; };
 		D0398B6B1F66671B0048E5E2 /* DuochromeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuochromeVC.swift; path = "Vision Test/DuochromeVC.swift"; sourceTree = "<group>"; };
@@ -63,12 +67,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5D44F19BEADB6E4B81BBC58 /* Pods_Vision_Test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		036645CC6DDF3526AC2D0AFC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADDEB70E4A54DE5251AAC085 /* Pods-Vision Test.debug.xcconfig */,
+				CA062909B732B94C1DCEDE88 /* Pods-Vision Test.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		96934A6B34D2D8DB7159AB5C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B3B036C4BCD00F1EDFFF67BC /* Pods_Vision_Test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D03B6B8A1F62A09C00735236 /* How to Use */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +140,8 @@
 			children = (
 				D0DF97031F5FCE56009AEE66 /* Vision Test */,
 				D0DF97021F5FCE56009AEE66 /* Products */,
+				036645CC6DDF3526AC2D0AFC /* Pods */,
+				96934A6B34D2D8DB7159AB5C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,9 +173,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D0DF97131F5FCE56009AEE66 /* Build configuration list for PBXNativeTarget "Vision Test" */;
 			buildPhases = (
+				29FBF6E97D04155CE37891F9 /* [CP] Check Pods Manifest.lock */,
 				D0DF96FD1F5FCE56009AEE66 /* Sources */,
 				D0DF96FE1F5FCE56009AEE66 /* Frameworks */,
 				D0DF96FF1F5FCE56009AEE66 /* Resources */,
+				D72C8DD4636E75241FAF63DA /* [CP] Embed Pods Frameworks */,
+				4053DE7042BB339EDCAF5229 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,6 +237,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29FBF6E97D04155CE37891F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4053DE7042BB339EDCAF5229 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vision Test/Pods-Vision Test-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D72C8DD4636E75241FAF63DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Vision Test/Pods-Vision Test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D0DF96FD1F5FCE56009AEE66 /* Sources */ = {
@@ -357,6 +432,7 @@
 		};
 		D0DF97141F5FCE56009AEE66 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADDEB70E4A54DE5251AAC085 /* Pods-Vision Test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD9NSD28HW;
@@ -370,6 +446,7 @@
 		};
 		D0DF97151F5FCE56009AEE66 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA062909B732B94C1DCEDE88 /* Pods-Vision Test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD9NSD28HW;

@@ -7,18 +7,43 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var myInterstitial : GADInterstitial?
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-6716196552638244~1603184659")
+        myInterstitial = createAndLoadInterstitial()
+        
         return true
     }
+    
+    func createAndLoadInterstitial()->GADInterstitial {
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+        interstitial.delegate = self as? GADInterstitialDelegate
+        interstitial.load(GADRequest())
+        return interstitial
+    }
 
+    func interstitialDidReceiveAd(ad: GADInterstitial!) {
+        print("interstitialDidReceiveAd")
+    }
+    
+    func interstitial(ad: GADInterstitial!, didFailToReceiveAdWithError error: GADRequestError!) {
+        print(error.localizedDescription)
+    }
+    
+    func interstitialDidDismissScreen(ad: GADInterstitial!) {
+        print("interstitialDidDismissScreen")
+        myInterstitial = createAndLoadInterstitial()
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.

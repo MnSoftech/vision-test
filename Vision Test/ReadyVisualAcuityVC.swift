@@ -7,6 +7,7 @@
 //
 
 import UIKit
+//import GoogleMobileAds
 
 class ReadyVisualAcuityVC: UIViewController {
 
@@ -19,12 +20,30 @@ class ReadyVisualAcuityVC: UIViewController {
     @IBOutlet weak var btn4: UIButton!
     var correctCount = 0
     var testDone = 1
-   
     
+    
+    
+    //var interstitial: GADInterstitial!
+
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+       
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+       /* interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+        let request = GADRequest()
+        interstitial.load(request)
+        if interstitial.isReady {
+                 interstitial.present(fromRootViewController: self)
+             } else {
+                print("Ad wasn't ready")
+             }*/
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        appDelegate.myInterstitial?.present(fromRootViewController: self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,6 +53,7 @@ class ReadyVisualAcuityVC: UIViewController {
     
     
     @IBAction func readyBtn(_ sender: UIButton) {
+        
             PerformTest1()
     }
     
@@ -81,7 +101,10 @@ class ReadyVisualAcuityVC: UIViewController {
     func PerformTest1 () {
         
         lableViewText.text = "M"
+        
+        lableTextView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableTextView)
+        constraintAdded()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.btn1.setTitle("M", for: .normal)
@@ -97,7 +120,11 @@ class ReadyVisualAcuityVC: UIViewController {
         lableViewText.text = "W"
         lableViewText.font = lableViewText.font.withSize(72)
         self.answerView.isHidden = true
+        
+        lableTextView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableTextView)
+        constraintAdded()
+
         self.btn1.setTitle("N", for: .normal)
         self.btn2.setTitle("W", for: .normal)
         self.btn3.setTitle("P", for: .normal)
@@ -113,7 +140,11 @@ class ReadyVisualAcuityVC: UIViewController {
         lableViewText.text = "R"
         lableViewText.font = lableViewText.font.withSize(31)
         self.answerView.isHidden = true
+        
+        lableTextView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableTextView)
+        constraintAdded()
+
         self.btn1.setTitle("V", for: .normal)
         self.btn2.setTitle("P", for: .normal)
         self.btn3.setTitle("R", for: .normal)
@@ -129,7 +160,11 @@ class ReadyVisualAcuityVC: UIViewController {
         lableViewText.text = "E"
         lableViewText.font = lableViewText.font.withSize(15)
         self.answerView.isHidden = true
+        
+        lableTextView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableTextView)
+        constraintAdded()
+
         self.btn1.setTitle("G", for: .normal)
         self.btn2.setTitle("S", for: .normal)
         self.btn3.setTitle("E", for: .normal)
@@ -145,7 +180,11 @@ class ReadyVisualAcuityVC: UIViewController {
         lableViewText.text = "C"
         lableViewText.font = lableViewText.font.withSize(7.5)
         self.answerView.isHidden = true
+        
+        lableTextView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(lableTextView)
+        constraintAdded()
+
         self.btn1.setTitle("G", for: .normal)
         self.btn2.setTitle("C", for: .normal)
         self.btn3.setTitle("O", for: .normal)
@@ -162,6 +201,15 @@ class ReadyVisualAcuityVC: UIViewController {
             let nextVC = (segue.destination as! LeftEyeVisualAcuityVC)
             nextVC.calculateRightEyeResult(value: correctCount)
         }
+    }
+    
+    func constraintAdded()  {
+        
+        let leftSideConstraint = NSLayoutConstraint(item: lableTextView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0)
+        let bottomConstraint = NSLayoutConstraint(item: lableTextView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let widthConstraint = NSLayoutConstraint(item: lableTextView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
+        let heightConstraint = NSLayoutConstraint(item: lableTextView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([leftSideConstraint, bottomConstraint, heightConstraint, widthConstraint])
     }
     
 

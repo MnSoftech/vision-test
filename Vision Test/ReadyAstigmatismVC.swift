@@ -29,7 +29,10 @@ class ReadyAstigmatismVC: UIViewController {
     
     @IBAction func readyBtn(_ sender: UIButton) {
         
+        astigSubView.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(astigSubView)
+        constraintAdded()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             
             self.answerView.isHidden = false
@@ -61,7 +64,11 @@ class ReadyAstigmatismVC: UIViewController {
         astagImageView.image = UIImage (named: "22")
         self.answerView.isHidden = true
         self.astagImageView.isHidden = false
-        self.view.addSubview(astagImageView)
+        
+        astigSubView.translatesAutoresizingMaskIntoConstraints = false
+        self.view.addSubview(astigSubView)
+        constraintAdded()
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
             self.astagImageView.isHidden = true
             self.answerView.isHidden = false
@@ -75,6 +82,16 @@ class ReadyAstigmatismVC: UIViewController {
         }
 
     }
+    
+    func constraintAdded()  {
+        
+        let leftSideConstraint = NSLayoutConstraint(item: astigSubView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0)
+        let bottomConstraint = NSLayoutConstraint(item: astigSubView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
+        let widthConstraint = NSLayoutConstraint(item: astigSubView, attribute: .width, relatedBy: .equal, toItem: view, attribute: .width, multiplier: 1.0, constant: 0.0)
+        let heightConstraint = NSLayoutConstraint(item: astigSubView, attribute: .height, relatedBy: .equal, toItem: view, attribute: .height, multiplier: 1.0, constant: 0.0)
+        view.addConstraints([leftSideConstraint, bottomConstraint, heightConstraint, widthConstraint])
+    }
+
     
 
 

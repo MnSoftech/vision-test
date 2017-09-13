@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class LeftEyeVisualAcuityVC: UIViewController {
 
+    
+    @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
     @IBOutlet weak var answerView: UIView!
     @IBOutlet var lableView: UIView!
     @IBOutlet weak var btn2: UIButton!
@@ -22,11 +25,16 @@ class LeftEyeVisualAcuityVC: UIViewController {
     @IBOutlet weak var leftEyeResultLabel: UILabel!
     var testDone = 1
     var correctCount = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.rootViewController = self
+        let request = GADRequest()
+        nativeExpressAds.load(request)
     }
 
     
@@ -83,6 +91,7 @@ class LeftEyeVisualAcuityVC: UIViewController {
         let result = b / 5
         leftEyeResultLabel.text = "\(result)%"
         resultView.isHidden = false
+        appDelegate.myInterstitial6?.present(fromRootViewController: self)
     }
     
     func calculateRightEyeResult (value : Int) {

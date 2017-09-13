@@ -11,6 +11,7 @@ import UIKit
 
 class ReadyVisualAcuityVC: UIViewController {
 
+    
     @IBOutlet var lableTextView: UIView!
     @IBOutlet weak var lableViewText: UILabel!
     @IBOutlet weak var answerView: UIView!
@@ -40,10 +41,12 @@ class ReadyVisualAcuityVC: UIViewController {
                 print("Ad wasn't ready")
              }*/
         
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        appDelegate.myInterstitial?.present(fromRootViewController: self)
+        
+        appDelegate.myInterstitial1?.present(fromRootViewController: self)
     }
 
     override func didReceiveMemoryWarning() {

@@ -13,13 +13,28 @@ import GoogleMobileAds
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var myInterstitial : GADInterstitial?
+    var myInterstitial1 : GADInterstitial?
+    var myInterstitial2 : GADInterstitial?
+    var myInterstitial3 : GADInterstitial?
+    var myInterstitial4 : GADInterstitial?
+    var myInterstitial5 : GADInterstitial?
+    var myInterstitial6 : GADInterstitial?
+    var myInterstitial7 : GADInterstitial?
+    var myInterstitial8 : GADInterstitial?
+    
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         GADMobileAds.configure(withApplicationID: "ca-app-pub-6716196552638244~1603184659")
-        myInterstitial = createAndLoadInterstitial()
+        myInterstitial1 = createAndLoadInterstitial()
+        myInterstitial2 = createAndLoadInterstitial()
+        myInterstitial3 = createAndLoadInterstitial()
+        myInterstitial4 = createAndLoadInterstitial()
+        myInterstitial5 = createAndLoadInterstitial()
+        myInterstitial6 = createAndLoadInterstitial()
+        myInterstitial7 = createAndLoadInterstitial()
+        myInterstitial8 = createAndLoadInterstitial()
         
         return true
     }
@@ -41,7 +56,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func interstitialDidDismissScreen(ad: GADInterstitial!) {
         print("interstitialDidDismissScreen")
-        myInterstitial = createAndLoadInterstitial()
+        myInterstitial1 = createAndLoadInterstitial()
+        myInterstitial2 = createAndLoadInterstitial()
+        myInterstitial3 = createAndLoadInterstitial()
+        myInterstitial4 = createAndLoadInterstitial()
+        myInterstitial5 = createAndLoadInterstitial()
+        myInterstitial6 = createAndLoadInterstitial()
+        myInterstitial7 = createAndLoadInterstitial()
+        myInterstitial8 = createAndLoadInterstitial()
+
+
     }
     
     func applicationWillResignActive(_ application: UIApplication) {

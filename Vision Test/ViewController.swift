@@ -12,12 +12,11 @@ import GoogleMobileAds
 class ViewController: UIViewController {
 
     
+    @IBOutlet weak var bannerAdView: GADBannerView!
     @IBOutlet weak var visualTestBtn: UIButton!
     @IBOutlet weak var colorBlindTestBtn: UIButton!
     @IBOutlet weak var astigmatismBtn: UIButton!
     @IBOutlet weak var duochromeBtn: UIButton!
-    var bannerView: GADBannerView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,23 +26,17 @@ class ViewController: UIViewController {
         astigmatismBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 55, bottom: 0, right: 0)
         duochromeBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 55, bottom: 0, right: 0)
         
-         bannerView = GADBannerView(adSize: kGADAdSizeFullBanner)
-        bannerView.frame = CGRect(x:0.0,
-                              y:self.view.frame.size.height - bannerView.frame.size.height,
-                              width:bannerView.frame.size.width,
-                            height:bannerView.frame.size.height)
+        self.view.addSubview(bannerAdView)
         
-        bannerView.translatesAutoresizingMaskIntoConstraints = false
-        self.view.addSubview(bannerView)
+        bannerAdView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        bannerAdView.rootViewController = self
+        bannerAdView.load(GADRequest())
         
-        let leftSideConstraint = NSLayoutConstraint(item: bannerView, attribute: .left, relatedBy: .equal, toItem: view, attribute: .left, multiplier: 1.0, constant: 0.0)
-        let bottomConstraint = NSLayoutConstraint(item: bannerView, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: 0.0)
-        let rightConstraint = NSLayoutConstraint(item: bannerView, attribute: .right, relatedBy: .equal, toItem: view, attribute: .right, multiplier: 1.0, constant: 0.0)
-        view.addConstraints([leftSideConstraint, bottomConstraint, rightConstraint])
+        //nativeExpressAdView.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        //nativeExpressAdView.rootViewController = self
         
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+       // let request = GADRequest()
+       // nativeExpressAdView.load(request)
         //bannerView.delegate = self
     }
 

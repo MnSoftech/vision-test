@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ColorBlindImageVC: UIViewController {
 
+    @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
     @IBOutlet weak var showImage: UIImageView!
     @IBOutlet var imageSubView: UIView!
     @IBOutlet weak var answerView: UIView!
@@ -21,11 +23,17 @@ class ColorBlindImageVC: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     var testDone = 0
     var correctCount = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.rootViewController = self
+        let request = GADRequest()
+        nativeExpressAds.load(request)
+        
         if testDone == 0 {
             firstTimeCall()
         }
@@ -103,6 +111,7 @@ class ColorBlindImageVC: UIViewController {
         let result = b / 5
         resultLabel.text = "\(result)%"
         resultView.isHidden = false
+        appDelegate.myInterstitial7?.present(fromRootViewController: self)
     }
     
     func PerformTest2 () {

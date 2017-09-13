@@ -7,24 +7,37 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class ReadyAstigmatismVC: UIViewController {
 
+    @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
     @IBOutlet var astigSubView: UIView!
     @IBOutlet weak var astagImageView: UIImageView!
     @IBOutlet weak var answerView: UIView!
     var testDone = 1
     var correctCount = 0
     
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.rootViewController = self
+        let request = GADRequest()
+        nativeExpressAds.load(request)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        appDelegate.myInterstitial2?.present(fromRootViewController: self)
     }
     
     @IBAction func readyBtn(_ sender: UIButton) {

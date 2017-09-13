@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
 
 class ReadyDuoLeftVC: UIViewController {
 
+    @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
     @IBOutlet var douSubView: UIView!
     @IBOutlet weak var duoImageView: UIImageView!
     @IBOutlet weak var answerView: UIView!
@@ -18,17 +21,28 @@ class ReadyDuoLeftVC: UIViewController {
     @IBOutlet weak var leftResultLabel: UILabel!
     var testDone = 1
     var correctCount = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.rootViewController = self
+        let request = GADRequest()
+        nativeExpressAds.load(request)
+
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+        
     }
+    
+   
     
 
     @IBAction func readyBtn(_ sender: UIButton) {
@@ -76,6 +90,7 @@ class ReadyDuoLeftVC: UIViewController {
         let result = b / 3
         leftResultLabel.text = "\(result)%"
         resultSubView.isHidden = false
+        appDelegate.myInterstitial5?.present(fromRootViewController: self)
     }
     
     func calculateRightEyeResult (value : Int) {

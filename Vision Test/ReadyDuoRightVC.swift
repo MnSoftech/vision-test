@@ -16,6 +16,8 @@ class ReadyDuoRightVC: UIViewController {
     var testDone = 1
     var correctCount = 0
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,6 +29,9 @@ class ReadyDuoRightVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        appDelegate.myInterstitial3?.present(fromRootViewController: self)
+    }
 
     @IBAction func readyBtn(_ sender: UIButton) {
         

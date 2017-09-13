@@ -9,11 +9,18 @@
 import UIKit
 
 class ColorBlindnessVC: UIViewController {
+    
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        appDelegate.myInterstitial4?.present(fromRootViewController: self)
     }
 
     override func didReceiveMemoryWarning() {

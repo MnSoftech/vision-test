@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import GoogleMobileAds
 
 class LeftEyeAstigVC: UIViewController {
 
    
+    @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
+    @IBOutlet weak var nativeAds: GADNativeExpressAdView!
     @IBOutlet var leftSubView: UIView!
     @IBOutlet weak var leftImageView: UIImageView!
     @IBOutlet weak var answerView: UIView!
@@ -19,11 +22,22 @@ class LeftEyeAstigVC: UIViewController {
     @IBOutlet weak var rightResultLabel: UILabel!
     var testDone = 1
     var correctCount = 0
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.rootViewController = self
+        let request = GADRequest()
+        nativeExpressAds.load(request)
+
+        nativeAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeAds.rootViewController = self
+        let requestAnother = GADRequest()
+        nativeAds.load(requestAnother)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -69,6 +83,7 @@ class LeftEyeAstigVC: UIViewController {
         let result = b / 2
         leftResulLabel.text = "\(result)%"
         resultView.isHidden = false
+        appDelegate.myInterstitial8?.present(fromRootViewController: self)
     }
     
     func calculateRightEyeResult (value : Int) {

@@ -31,17 +31,6 @@ class ReadyVisualAcuityVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-       /* interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
-        let request = GADRequest()
-        interstitial.load(request)
-        if interstitial.isReady {
-                 interstitial.present(fromRootViewController: self)
-             } else {
-                print("Ad wasn't ready")
-             }*/
-        
-        
     }
     
     override func viewDidAppear(_ animated: Bool) {

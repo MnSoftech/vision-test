@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-6716196552638244~1603184659")
+        GADMobileAds.configure(withApplicationID: "ca-app-pub-9715580163444023~2584948043")
         myInterstitial1 = createAndLoadInterstitial()
         myInterstitial2 = createAndLoadInterstitial()
         myInterstitial3 = createAndLoadInterstitial()
@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func createAndLoadInterstitial()->GADInterstitial {
-        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/1033173712")
+        let interstitial = GADInterstitial(adUnitID: "ca-app-pub-9715580163444023/8491880845")
         interstitial.delegate = self as? GADInterstitialDelegate
         interstitial.load(GADRequest())
         return interstitial

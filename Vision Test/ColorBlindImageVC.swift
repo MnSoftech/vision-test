@@ -11,6 +11,7 @@ import GoogleMobileAds
 
 class ColorBlindImageVC: UIViewController {
 
+    @IBOutlet weak var resultSmileImage: UIImageView!
     @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
     @IBOutlet weak var showImage: UIImageView!
     @IBOutlet var imageSubView: UIView!
@@ -29,7 +30,7 @@ class ColorBlindImageVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.adUnitID = "ca-app-pub-9715580163444023/5312195496"
         nativeExpressAds.rootViewController = self
         let request = GADRequest()
         nativeExpressAds.load(request)
@@ -110,6 +111,14 @@ class ColorBlindImageVC: UIViewController {
         let b = value * 100
         let result = b / 5
         resultLabel.text = "\(result)%"
+        if result < 100 {
+            resultSmileImage.image = UIImage(named: "smile_bed")
+        }
+        
+        if result == 100 {
+            resultSmileImage.image = UIImage(named: "smile_well")
+        }
+
         resultView.isHidden = false
         appDelegate.myInterstitial7?.present(fromRootViewController: self)
     }

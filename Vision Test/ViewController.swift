@@ -21,14 +21,29 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        visualTestBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 55, bottom: 0, right: 0)
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad) {
+            visualTestBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 165, bottom: 0, right: 0)
+            colorBlindTestBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 245, bottom: 0, right: 0)
+            astigmatismBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 180, bottom: 0, right: 0)
+            duochromeBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 175, bottom: 0, right: 0)
+            visualTestBtn.titleLabel!.font = UIFont(name: "HelveticaNeue-Bold", size: 72)
+            colorBlindTestBtn.titleLabel!.font = UIFont(name: "HelveticaNeue-Bold", size: 72)
+            astigmatismBtn.titleLabel!.font = UIFont(name: "HelveticaNeue-Bold", size: 72)
+            duochromeBtn.titleLabel!.font = UIFont(name: "HelveticaNeue-Bold", size: 72)
+            
+        }
+        else {
+        
+        visualTestBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 25, bottom: 0, right: 0)
         colorBlindTestBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 65, bottom: 0, right: 0)
-        astigmatismBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 55, bottom: 0, right: 0)
-        duochromeBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 55, bottom: 0, right: 0)
+        astigmatismBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 0)
+        duochromeBtn.contentEdgeInsets = UIEdgeInsets(top: 0, left: 35, bottom: 0, right: 0)
+            
+        }
         
         self.view.addSubview(bannerAdView)
         
-        bannerAdView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
+        bannerAdView.adUnitID = "ca-app-pub-9715580163444023/1992608024"
         bannerAdView.rootViewController = self
         bannerAdView.load(GADRequest())
         

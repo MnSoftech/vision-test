@@ -25,7 +25,7 @@ class ReadyAstigmatismVC: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.adUnitID = "ca-app-pub-9715580163444023/5312195496"
         nativeExpressAds.rootViewController = self
         let request = GADRequest()
         nativeExpressAds.load(request)

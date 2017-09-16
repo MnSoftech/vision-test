@@ -11,15 +11,18 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SlideView" customModule="Vision_Test" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="274"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SlideView" customModule="Eye_Test" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="510" height="584"/>
             <autoresizingMask key="autoresizingMask"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="az7-i0-ewj">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="209"/>
+                    <rect key="frame" x="0.0" y="0.0" width="510" height="519"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pgx-X0-RbD">
-                    <rect key="frame" x="16" y="253.5" width="343" height="20.5"/>
+                    <rect key="frame" x="8" y="527" width="494" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="SaE-v1-3rY"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
@@ -27,20 +30,20 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Pgx-X0-RbD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="3oA-27-i6g"/>
-                <constraint firstAttribute="bottom" secondItem="Pgx-X0-RbD" secondAttribute="bottom" id="6KS-LH-JFq"/>
-                <constraint firstItem="az7-i0-ewj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IZK-j9-MlK"/>
-                <constraint firstItem="az7-i0-ewj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Op4-7u-psa"/>
-                <constraint firstAttribute="trailing" secondItem="az7-i0-ewj" secondAttribute="trailing" id="jpR-Jo-XqA"/>
-                <constraint firstAttribute="trailing" secondItem="Pgx-X0-RbD" secondAttribute="trailing" constant="16" id="mMw-qq-ib7"/>
-                <constraint firstItem="Pgx-X0-RbD" firstAttribute="top" secondItem="az7-i0-ewj" secondAttribute="bottom" constant="44.5" id="rdg-g1-qId"/>
+                <constraint firstAttribute="trailing" secondItem="az7-i0-ewj" secondAttribute="trailing" id="78d-kF-38Y"/>
+                <constraint firstItem="az7-i0-ewj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="JcW-W0-cIj"/>
+                <constraint firstAttribute="bottom" secondItem="Pgx-X0-RbD" secondAttribute="bottom" constant="7" id="LZp-hd-Fhv"/>
+                <constraint firstItem="Pgx-X0-RbD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Z4L-zy-Y3H"/>
+                <constraint firstItem="Pgx-X0-RbD" firstAttribute="top" secondItem="az7-i0-ewj" secondAttribute="bottom" constant="8" id="iz3-7Y-QT7"/>
+                <constraint firstItem="az7-i0-ewj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="tmi-BY-36D"/>
+                <constraint firstAttribute="trailing" secondItem="Pgx-X0-RbD" secondAttribute="trailing" constant="8" id="wzu-B5-zeV"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="mainImage" destination="az7-i0-ewj" id="Glp-m2-NAH"/>
                 <outlet property="textLbl" destination="Pgx-X0-RbD" id="92S-To-sOh"/>
             </connections>
-            <point key="canvasLocation" x="15.5" y="-97"/>
+            <point key="canvasLocation" x="242" y="-14"/>
         </view>
     </objects>
 </document>

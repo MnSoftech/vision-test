@@ -12,6 +12,8 @@ import GoogleMobileAds
 class LeftEyeVisualAcuityVC: UIViewController {
 
     
+    @IBOutlet weak var rightEyeImage: UIImageView!
+    @IBOutlet weak var leftEyeImage: UIImageView!
     @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
     @IBOutlet weak var answerView: UIView!
     @IBOutlet var lableView: UIView!
@@ -31,7 +33,7 @@ class LeftEyeVisualAcuityVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.adUnitID = "ca-app-pub-9715580163444023/5312195496"
         nativeExpressAds.rootViewController = self
         let request = GADRequest()
         nativeExpressAds.load(request)
@@ -90,6 +92,13 @@ class LeftEyeVisualAcuityVC: UIViewController {
         let b = value * 100
         let result = b / 5
         leftEyeResultLabel.text = "\(result)%"
+        if result < 100 {
+            leftEyeImage.image = UIImage(named: "smile_bed")
+        }
+        
+        if result == 100 {
+            leftEyeImage.image = UIImage(named: "smile_well")
+        }
         resultView.isHidden = false
         appDelegate.myInterstitial6?.present(fromRootViewController: self)
     }
@@ -97,8 +106,14 @@ class LeftEyeVisualAcuityVC: UIViewController {
     func calculateRightEyeResult (value : Int) {
         
         let b = value * 100
-        let result = b / 5
-        rightEyeResultLabel.text = "\(result)%"
+        let rightResult = b / 5
+        rightEyeResultLabel.text = "\(rightResult)%"
+        if rightResult < 100 {
+            rightEyeImage.image = UIImage(named: "smile_bed")
+        }
+        if rightResult == 100 {
+            rightEyeImage.image = UIImage(named: "smile_well")
+        }
     }
     
     func PerformTest1 () {

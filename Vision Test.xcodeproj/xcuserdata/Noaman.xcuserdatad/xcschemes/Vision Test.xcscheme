@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D0DF97001F5FCE56009AEE66"
-               BuildableName = "Vision Test.app"
+               BuildableName = "Eye Test.app"
                BlueprintName = "Vision Test"
                ReferencedContainer = "container:Vision Test.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0DF97001F5FCE56009AEE66"
-            BuildableName = "Vision Test.app"
+            BuildableName = "Eye Test.app"
             BlueprintName = "Vision Test"
             ReferencedContainer = "container:Vision Test.xcodeproj">
          </BuildableReference>
@@ -56,7 +56,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0DF97001F5FCE56009AEE66"
-            BuildableName = "Vision Test.app"
+            BuildableName = "Eye Test.app"
             BlueprintName = "Vision Test"
             ReferencedContainer = "container:Vision Test.xcodeproj">
          </BuildableReference>
@@ -75,7 +75,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D0DF97001F5FCE56009AEE66"
-            BuildableName = "Vision Test.app"
+            BuildableName = "Eye Test.app"
             BlueprintName = "Vision Test"
             ReferencedContainer = "container:Vision Test.xcodeproj">
          </BuildableReference>

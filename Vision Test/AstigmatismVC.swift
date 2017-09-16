@@ -12,36 +12,61 @@ class AstigmatismVC: UIViewController, UIScrollViewDelegate {
 
     @IBOutlet weak var slideScrollView: UIScrollView!
     @IBOutlet weak var slidePageControl: UIPageControl!
-    let slide1 = ["image": "1", "lable": "Hold at arm's lenght"]
-    let slide2 = ["image": "2", "lable": "Keep head straight and the device in front of your eyes"]
-
+    @IBOutlet weak var scrollHeightConstaint: NSLayoutConstraint!
+    
+    let slide1 = ["image": "ipad 1", "lable": "Hold at arm's lenght"]
+    let slide2 = ["image": "ipad 2", "lable": "Keep head straight and the device in front of your eyes"]
+    let slideiPhone1 = ["image": "1", "lable": "Hold at arm's lenght"]
+    let slideiPhone2 = ["image": "2", "lable": "Keep head straight and the device in front of your eyes"]
+    
     var slideArray = [Dictionary<String, String>]()
-
+    var slideArrayiPhone = [Dictionary<String, String>]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad) {
+            scrollHeightConstaint.constant = 600
+        }
         slideArray = [slide1, slide2]
+        slideArrayiPhone = [slideiPhone1, slideiPhone2]
+        
         slideScrollView.isPagingEnabled = true
-        slideScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(slideArray.count), height: 262)
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone ) {
+            slideScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(slideArrayiPhone.count), height: 305)
+        } else if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad ) {
+            slideScrollView.contentSize = CGSize(width: self.view.bounds.width * CGFloat(slideArray.count), height: 600)
+        }
         slideScrollView.showsHorizontalScrollIndicator = false
         slideScrollView.delegate = self
         loadSlide()
+
     }
     
     func loadSlide() {
-        for (index, slide) in slideArray.enumerated() {
-            if let slideViews = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as? SlideView {
-                slideViews.mainImage.image = UIImage(named: slide["image"]!)
-                slideViews.textLbl.text = slide["lable"]
-                slideScrollView.addSubview(slideViews)
-                slideViews.frame.size.width = self.view.bounds.width
-                slideViews.frame.origin.x =  CGFloat(index) * self.view.bounds.size.width
-                
+        
+        if ( UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad) {
+            for (index, slide) in slideArray.enumerated() {
+                if let slideViews = Bundle.main.loadNibNamed("slide", owner: self, options: nil)?.first as? SlideView {
+                    slideViews.mainImage.image = UIImage(named: slide["image"]!)
+                    slideViews.textLbl.text = slide["lable"]
+                    slideScrollView.addSubview(slideViews)
+                    slideViews.frame.size.width = self.view.bounds.width
+                    slideViews.frame.origin.x =  CGFloat(index) * self.view.bounds.size.width
+                }
             }
         }
-        
+        else {
+            for (index, slide) in slideArrayiPhone.enumerated() {
+                if let slideViews = Bundle.main.loadNibNamed("slideiPad", owner: self, options: nil)?.first as? SlideiPadView {
+                    slideViews.slideiPadImage.image = UIImage(named: slide["image"]!)
+                    slideViews.slideiPadLabel.text = slide["lable"]
+                    slideScrollView.addSubview(slideViews)
+                    slideViews.frame.size.width = self.view.bounds.width
+                    slideViews.frame.origin.x =  CGFloat(index) * self.view.bounds.size.width
+                }
+            }
+        }
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

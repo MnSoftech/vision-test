@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D00762581F6A889700B27C97 /* Splash Screen.png in Resources */ = {isa = PBXBuildFile; fileRef = D00762571F6A889700B27C97 /* Splash Screen.png */; };
 		D02096381F625541001E810D /* ColorBlindImageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D02096371F625541001E810D /* ColorBlindImageVC.swift */; };
 		D0398B6A1F6667090048E5E2 /* DuochromeMainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0398B691F6667090048E5E2 /* DuochromeMainVC.swift */; };
 		D0398B6C1F66671B0048E5E2 /* DuochromeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0398B6B1F66671B0048E5E2 /* DuochromeVC.swift */; };
@@ -25,10 +26,12 @@
 		D07B8E5E1F6168A60087B209 /* ColorBlindVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07B8E5D1F6168A60087B209 /* ColorBlindVC.swift */; };
 		D0DF97051F5FCE56009AEE66 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF97041F5FCE56009AEE66 /* AppDelegate.swift */; };
 		D0DF97071F5FCE56009AEE66 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF97061F5FCE56009AEE66 /* ViewController.swift */; };
-		D0DF970A1F5FCE56009AEE66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF97081F5FCE56009AEE66 /* Main.storyboard */; };
 		D0DF970C1F5FCE56009AEE66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */; };
 		D0DF970F1F5FCE56009AEE66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DF970D1F5FCE56009AEE66 /* LaunchScreen.storyboard */; };
 		D0DF97171F5FD54B009AEE66 /* VisualTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0DF97161F5FD54B009AEE66 /* VisualTestViewController.swift */; };
+		D0FA7F1E1F6BBBAA00A69094 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0FA7F1C1F6BBBAA00A69094 /* Main.storyboard */; };
+		D0FAE6411F6D00D7000962A8 /* slideiPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = D0FAE6401F6D00D7000962A8 /* slideiPad.xib */; };
+		D0FAE6451F6D01A0000962A8 /* SlideiPadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FAE6441F6D01A0000962A8 /* SlideiPadView.swift */; };
 		F5D44F19BEADB6E4B81BBC58 /* Pods_Vision_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3B036C4BCD00F1EDFFF67BC /* Pods_Vision_Test.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,7 @@
 		ADDEB70E4A54DE5251AAC085 /* Pods-Vision Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision Test.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Vision Test/Pods-Vision Test.debug.xcconfig"; sourceTree = "<group>"; };
 		B3B036C4BCD00F1EDFFF67BC /* Pods_Vision_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Vision_Test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA062909B732B94C1DCEDE88 /* Pods-Vision Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Vision Test.release.xcconfig"; path = "Pods/Target Support Files/Pods-Vision Test/Pods-Vision Test.release.xcconfig"; sourceTree = "<group>"; };
+		D00762571F6A889700B27C97 /* Splash Screen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Splash Screen.png"; sourceTree = "<group>"; };
 		D02096371F625541001E810D /* ColorBlindImageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlindImageVC.swift; path = "Vision Test/ColorBlindImageVC.swift"; sourceTree = "<group>"; };
 		D0398B691F6667090048E5E2 /* DuochromeMainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuochromeMainVC.swift; path = "Vision Test/DuochromeMainVC.swift"; sourceTree = "<group>"; };
 		D0398B6B1F66671B0048E5E2 /* DuochromeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DuochromeVC.swift; path = "Vision Test/DuochromeVC.swift"; sourceTree = "<group>"; };
@@ -52,14 +56,16 @@
 		D07B8E561F615BDE0087B209 /* LeftEyeVisualAcuityVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LeftEyeVisualAcuityVC.swift; path = "Vision Test/LeftEyeVisualAcuityVC.swift"; sourceTree = "<group>"; };
 		D07B8E591F6168520087B209 /* ColorBlindnessVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlindnessVC.swift; path = "Vision Test/ColorBlindnessVC.swift"; sourceTree = "<group>"; };
 		D07B8E5D1F6168A60087B209 /* ColorBlindVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ColorBlindVC.swift; path = "Vision Test/ColorBlindVC.swift"; sourceTree = "<group>"; };
-		D0DF97011F5FCE56009AEE66 /* Vision Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Vision Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0DF97011F5FCE56009AEE66 /* Eye Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eye Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0DF97041F5FCE56009AEE66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0DF97061F5FCE56009AEE66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D0DF97091F5FCE56009AEE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "Vision Test/Assets.xcassets"; sourceTree = "<group>"; };
 		D0DF970E1F5FCE56009AEE66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D0DF97101F5FCE56009AEE66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "Vision Test/Info.plist"; sourceTree = "<group>"; };
 		D0DF97161F5FD54B009AEE66 /* VisualTestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VisualTestViewController.swift; path = "Vision Test/VisualTestViewController.swift"; sourceTree = "<group>"; };
+		D0FA7F1D1F6BBBAA00A69094 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Vision Test/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		D0FAE6401F6D00D7000962A8 /* slideiPad.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = slideiPad.xib; path = "Vision Test/slideiPad.xib"; sourceTree = "<group>"; };
+		D0FAE6441F6D01A0000962A8 /* SlideiPadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SlideiPadView.swift; path = "Vision Test/SlideiPadView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				D07B8E501F610D850087B209 /* SlideView.swift */,
+				D0FAE6441F6D01A0000962A8 /* SlideiPadView.swift */,
+				D0FAE6401F6D00D7000962A8 /* slideiPad.xib */,
 				D07B8E4E1F610CCE0087B209 /* slide.xib */,
 			);
 			name = "How to Use";
@@ -106,13 +114,14 @@
 			children = (
 				D0DF970B1F5FCE56009AEE66 /* Assets.xcassets */,
 				D0DF970D1F5FCE56009AEE66 /* LaunchScreen.storyboard */,
+				D00762571F6A889700B27C97 /* Splash Screen.png */,
 				D0DF97101F5FCE56009AEE66 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			path = ..;
 			sourceTree = "<group>";
 		};
-		D07B8E581F6162C00087B209 /* Controllers */ = {
+		D07B8E581F6162C00087B209 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				D0398B6F1F666CD20048E5E2 /* ReadyDuoLeftVC.swift */,
@@ -131,7 +140,7 @@
 				D07B8E541F6129420087B209 /* ReadyVisualAcuityVC.swift */,
 				D07B8E521F6123790087B209 /* VisualAcuityVC.swift */,
 			);
-			name = Controllers;
+			name = "View Controllers";
 			path = ..;
 			sourceTree = "<group>";
 		};
@@ -148,7 +157,7 @@
 		D0DF97021F5FCE56009AEE66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D0DF97011F5FCE56009AEE66 /* Vision Test.app */,
+				D0DF97011F5FCE56009AEE66 /* Eye Test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,10 +166,10 @@
 			isa = PBXGroup;
 			children = (
 				D03B6B8A1F62A09C00735236 /* How to Use */,
-				D07B8E581F6162C00087B209 /* Controllers */,
-				D0DF97081F5FCE56009AEE66 /* Main.storyboard */,
+				D07B8E581F6162C00087B209 /* View Controllers */,
 				D0DF97061F5FCE56009AEE66 /* ViewController.swift */,
 				D0DF97041F5FCE56009AEE66 /* AppDelegate.swift */,
+				D0FA7F1C1F6BBBAA00A69094 /* Main.storyboard */,
 				D03B6B931F62AF4700735236 /* Supporting Files */,
 			);
 			path = "Vision Test";
@@ -186,7 +195,7 @@
 			);
 			name = "Vision Test";
 			productName = "Vision Test";
-			productReference = D0DF97011F5FCE56009AEE66 /* Vision Test.app */;
+			productReference = D0DF97011F5FCE56009AEE66 /* Eye Test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -229,9 +238,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D00762581F6A889700B27C97 /* Splash Screen.png in Resources */,
+				D0FAE6411F6D00D7000962A8 /* slideiPad.xib in Resources */,
+				D0FA7F1E1F6BBBAA00A69094 /* Main.storyboard in Resources */,
 				D0DF970F1F5FCE56009AEE66 /* LaunchScreen.storyboard in Resources */,
 				D0DF970C1F5FCE56009AEE66 /* Assets.xcassets in Resources */,
-				D0DF970A1F5FCE56009AEE66 /* Main.storyboard in Resources */,
 				D07B8E4F1F610CCE0087B209 /* slide.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +306,7 @@
 				D07B8E531F6123790087B209 /* VisualAcuityVC.swift in Sources */,
 				D02096381F625541001E810D /* ColorBlindImageVC.swift in Sources */,
 				D0DF97051F5FCE56009AEE66 /* AppDelegate.swift in Sources */,
+				D0FAE6451F6D01A0000962A8 /* SlideiPadView.swift in Sources */,
 				D03B6B901F62A4B000735236 /* ReadyAstigmatismVC.swift in Sources */,
 				D07B8E5A1F6168520087B209 /* ColorBlindnessVC.swift in Sources */,
 				D07B8E511F610D850087B209 /* SlideView.swift in Sources */,
@@ -315,14 +327,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D0DF97081F5FCE56009AEE66 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D0DF97091F5FCE56009AEE66 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D0DF970D1F5FCE56009AEE66 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -330,6 +334,15 @@
 			);
 			name = LaunchScreen.storyboard;
 			path = "Vision Test";
+			sourceTree = "<group>";
+		};
+		D0FA7F1C1F6BBBAA00A69094 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D0FA7F1D1F6BBBAA00A69094 /* Base */,
+			);
+			name = Main.storyboard;
+			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -437,10 +450,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD9NSD28HW;
 				INFOPLIST_FILE = "Vision Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mnsoftechapps.Vision-Test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.output1.eye.test.color.blind;
+				PRODUCT_NAME = "Eye Test";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -451,10 +466,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = GD9NSD28HW;
 				INFOPLIST_FILE = "Vision Test/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.mnsoftechapps.Vision-Test";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.output1.eye.test.color.blind;
+				PRODUCT_NAME = "Eye Test";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

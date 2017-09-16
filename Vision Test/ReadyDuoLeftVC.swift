@@ -12,6 +12,8 @@ import GoogleMobileAds
 
 class ReadyDuoLeftVC: UIViewController {
 
+    @IBOutlet weak var leftResultImage: UIImageView!
+    @IBOutlet weak var rightResultImage: UIImageView!
     @IBOutlet weak var nativeExpressAds: GADNativeExpressAdView!
     @IBOutlet var douSubView: UIView!
     @IBOutlet weak var duoImageView: UIImageView!
@@ -28,7 +30,7 @@ class ReadyDuoLeftVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        nativeExpressAds.adUnitID = "ca-app-pub-3940256099942544/4270592515"
+        nativeExpressAds.adUnitID = "ca-app-pub-9715580163444023/5312195496"
         nativeExpressAds.rootViewController = self
         let request = GADRequest()
         nativeExpressAds.load(request)
@@ -89,6 +91,14 @@ class ReadyDuoLeftVC: UIViewController {
         let b = value * 100
         let result = b / 3
         leftResultLabel.text = "\(result)%"
+        if result < 100 {
+            leftResultImage.image = UIImage(named: "smile_bed")
+        }
+        
+        if result == 100 {
+            leftResultImage.image = UIImage(named: "smile_well")
+        }
+
         resultSubView.isHidden = false
         appDelegate.myInterstitial5?.present(fromRootViewController: self)
     }
@@ -97,6 +107,14 @@ class ReadyDuoLeftVC: UIViewController {
         let b = value * 100
         let result = b / 3
         rightResultLabel.text = "\(result)%"
+        if result < 100 {
+            rightResultImage.image = UIImage(named: "smile_bed")
+        }
+        
+        if result == 100 {
+            rightResultImage.image = UIImage(named: "smile_well")
+        }
+
     }
 
     
